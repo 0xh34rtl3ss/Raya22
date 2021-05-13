@@ -1,9 +1,12 @@
 function selectText(containerid) {
     window.getSelection().selectAllChildren(document.getElementById(containerid));
 }
+
+
 $(document).ready(function () {
 
-    
+
+
     rotate = 0;
     executed = false;
     var windowWidth = $(window).width();
@@ -43,29 +46,7 @@ $(document).ready(function () {
             }, 500);
         }, 500);
     }
-    $(window).scroll(function () {
-        var qW = $(window).height() / 4;
-        var dH = getDocHeight();
-        var hT = $('.main').offset().top,
-            hH = $('.main').outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
-        $(".bgnew").css("opacity", 1 - wS / qW);
-        if (wS + wH > dH - wH + 600) {
-            var amount = 1 - (((dH - wH) - wS) / qW);
-            $(".bgnew").css("opacity", 0 + amount);
-        }
-        if (wS > (hT + hH - wH) && (hT > wS) && (wS + wH > hT + hH)) {
-            $('.toggle-box-right').hide(500);
-            if ($(window).width() > 820) {
-                $('.mobile-box').hide(500);
-            }
-        } else {
-            $('.toggle-box-right').show(500);
-            $('.mobile-box').show(500);
-            return;
-        }
-    });
+    
     if ($(window).width() < 1000) {
         if (rotate == 0) {
             MyToggleFunction();
