@@ -2,10 +2,14 @@ function selectText(containerid) {
     window.getSelection().selectAllChildren(document.getElementById(containerid));
 }
 $(document).ready(function () {
+
+    
     rotate = 0;
     executed = false;
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
+
+   
     $('.bg').css({
         'width': windowWidth,
         'height': windowHeight
@@ -14,6 +18,14 @@ $(document).ready(function () {
         'width': windowWidth,
         'height': windowHeight
     });
+
+    console.log("wrap% "+windowHeight+" pts")
+    var outers = $('.outer').css("height");
+    var outer =  ((windowHeight - 57.75) /2 ) -131.25  ;
+    console.log("height "+outers)
+    console.log(outer)
+
+
     $('.wrap-outer').css({
         'width': windowWidth,
         'height': windowHeight
