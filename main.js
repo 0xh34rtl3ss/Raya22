@@ -6,7 +6,7 @@ function copy(){
     var input= document.getElementById('text');
     input.select();
     document.execCommand("copy");
-    alert("text copied")
+    alert("Text copied.")
   }
 
 
