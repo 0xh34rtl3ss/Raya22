@@ -7,15 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mrn·QR</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
 </head>
 <style>
-    .outer {
+    /* .outer {
         display: flex;
         justify-content: center;
         align-items: center;
 
-    }
+    } */
 
     /* #qrr {
         margin-left: auto;
@@ -35,7 +36,7 @@
         background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     }
 
-     .wrap {
+    .wrap {
         top: 0px;
         left: 0px;
         width: 100vw;
@@ -48,7 +49,7 @@
         -webkit-transition: all 1s;
         -o-transition: all 1s;
         transition: all 1s;
-    } 
+    }
 
 
     h1 {
@@ -65,7 +66,7 @@
         padding-top: 24.5px;
     }
 
-    #thanks{
+    #thanks {
         color: #ffffff;
         direction: ltr;
         font-family: 'Roboto', Tahoma, Verdana, Segoe, sans-serif;
@@ -77,7 +78,7 @@
         margin-top: 0;
         margin-bottom: 0;
         padding-top: 24.5px;
-        
+
     }
 
     .header {
@@ -85,6 +86,64 @@
         height: 77px;
         background-color: black;
     }
+
+    input{
+        border: 2px solid #fff;
+        border-radius: 5px;
+        width: 72%;
+        height: 100%;
+        font-size: 18px;
+        padding: 0 10px 0 10px;
+        outline: none;
+        color: #C70773;
+        text-align: center;
+        box-shadow: 0 0 10px -4px #fff;
+        letter-spacing: 1px;
+      }
+
+      #copy{
+        border: 2px solid #fff;
+        border-radius: 5px;
+        width: 20%;
+        height: 100%;
+        font-size: 18px;
+        padding: 0 40px 0 10px;
+        outline: none;
+        color: black;
+        box-shadow: 0 0 10px -4px #fff;
+        letter-spacing: 1px;
+      }
+
+
+      i:active{
+        color: #c2c2c2;
+      }
+      i{
+        position: absolute;
+        top: 10px;
+        right: -46px;
+        color:#fff;
+        cursor: pointer;
+        font-size: 40px;
+        transform: scale(1.1);
+      }
+      p{
+        color:#fff;
+        font-size: 18px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        letter-spacing: 1px;
+      }
+
+    
+      #bankk{
+          border: #E6235F 10px solid;
+      }
+ 
+
+
 </style>
 <script type="text/javascript" src="./main.js"></script>
 
@@ -99,21 +158,37 @@
             <h1><strong>mrn.</strong></h1>
         </div>
 
-        
+
 
 
     </div>
 
     <div class="wrap" style="width: 1920px; height: 446px;">
 
-        
+
 
         <div class="outer">
-            <img id="qrr" src="./images/DuitNowQR_13052021013831.png" alt="Paris" class="center">
-            
+            <div>
+                <img id="qrr" src="./images/DuitNowQR_13052021013831.png" alt="Paris" class="center">
+
+            </div>
+
+            <div>
+                <br>
+                <img id="bankk" src="./images/295-2950008_bank-islam-logo-vector-bank-islam-hd-png.png" width="340" height="116.67"><br>
+                <div class="copp">
+                <input readonly type="text" id="text" value="14014023629879">
+                <button id="copy" onclick="copy()">Copy</button>
+                </div>  
+                <h1 id="show"></h1>
+                <h1>Thank You!🙏😊</h1>
+                
+            </div>
+
         </div>
-        
+
     </div>
+
 
 </body>
 

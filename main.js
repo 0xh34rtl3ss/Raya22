@@ -2,6 +2,13 @@ function selectText(containerid) {
     window.getSelection().selectAllChildren(document.getElementById(containerid));
 }
 
+function copy(){
+    var input= document.getElementById('text');
+    input.select();
+    document.execCommand("copy");
+    alert("text copied")
+  }
+
 
 $(document).ready(function () {
 
